@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/general.css">
+
+
+</head>
+
+<body>
+
+    <div id="container" class="boxed flex-container flex-wrap justify-content-around padded-container-small">
+
+        <form>
+            <input name="citta" id="citta" type="text" placeholder="digita città"></input>
+            <button id="calcola"> Calcola Meteo</button>
+        </form>
+
+        <div id="view-temp" class="none" >
+            <p id="city"></p>
+            <p id="temp"></p>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
