@@ -7,7 +7,7 @@ const t = document.querySelector('#temp');
 const city = document.querySelector('#city');
 
 
-
+// VERSIONE INIZIALE ASYNC AWAIT CORRETTA
 
 calcola.addEventListener("click", async (event) => {
     event.preventDefault();
@@ -61,7 +61,7 @@ async function calcolaMeteoByCitta(citta) {
 
 
 
-/* PROVA INIZIALE
+/* PROVA INIZIALE async e await errata
 calcola.addEventListener("click", async function (event) {
 
     event.preventDefault();
@@ -148,7 +148,8 @@ async function calcolaMeteoByCitta(citta) {
 
 
 
-/*
+
+/* Versione non asincrona 
 calcola.addEventListener("click", function (event) {
 
     event.preventDefault();
@@ -234,6 +235,6 @@ calcola.addEventListener("click", function (event) {
 
     cittaInput.value = "";
 });
-
 */
+
 
