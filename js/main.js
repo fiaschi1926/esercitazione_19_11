@@ -145,3 +145,95 @@ async function calcolaMeteoByCitta(citta) {
 
 }
 */
+
+
+
+/*
+calcola.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    let citta = cittaInput.value;
+
+    if (citta != "") {
+
+
+        let temperature_2m;
+        const urlCitta = `https://geocoding-api.open-meteo.com/v1/search?name=${citta}`;
+        axios.get(urlCitta)
+            .then(
+                (result) => {
+
+                    t.innerHTML = "";
+                    console.log(result);
+                    const data = result.data.results[0];
+
+                    // if (data === undefined || data === '') {
+                    //     alert("Nessun risultato per la città digitata");
+                    //     throw new Error("Nessun risultato per la città digitata");
+                    // }
+
+                    city.innerHTML = `Città: ${data.name} (${data.country_code})`;
+
+
+                    const latitudine = data.latitude;
+                    const longitudine = data.longitude;
+
+                    const urlMeteo = `https://api.open-meteo.com/v1/forecast?latitude=${latitudine}&longitude=${longitudine}&current=temperature_2m`;
+
+
+                    axios.get(urlMeteo)
+                        .then(
+                            (result) => {
+                                console.log(result);
+
+                                temperature_2m = result.data.current.temperature_2m;
+
+                                let meteo = temperature_2m;
+
+                                if (meteo === undefined || meteo === '') {
+                                    viewTemp.className = "none";
+                                    t.innerHTML = "Temperatura: ";
+                                } else {
+                                    viewTemp.className = "block";
+                                    t.innerHTML += meteo;
+                                }
+
+                                console.log(meteo);
+
+                            })
+                        .catch(
+                            (error) => {
+                                console.error(error)
+                            });
+
+
+
+
+
+
+                })
+            .catch(
+                (error) => {
+
+                    console.log(error)
+
+                    if (error.status != '') {
+                        console.error(error.status)
+                    } else {
+                        console.error(error)
+                    }
+                });
+
+
+
+    } else {
+        alert("digitare prima di aggiungere una città")
+
+    }
+
+    cittaInput.value = "";
+});
+
+*/
+
